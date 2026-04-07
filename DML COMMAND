@@ -1,0 +1,49 @@
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| batch1318_db       |
+| company            |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> USE company'
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1
+mysql> USE company;
+Database changed
+mysql> SHOW tables;
++-------------------+
+| Tables_in_company |
++-------------------+
+| emp               |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> DESCRIBE emp;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| name       | varchar(50) | YES  |     | NULL    |       |
+| department | varchar(50) | YES  |     | NULL    |       |
+| salary     | bigint      | YES  |     | NULL    |       |
+| phone_no   | bigint      | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> SELECT * FROM emp;
++-------+------------+--------+----------+
+| name  | department | salary | phone_no |
++-------+------------+--------+----------+
+| kajol | it         |  77000 |  5656789 |
+| om    | civil      |  67000 |  9876543 |
+| nisha | electronic |  45000 |   876553 |
+| jay   | CA         |  80000 |  9876554 |
+| raj   | teacher    |  30000 |   345667 |
++-------+------------+--------+----------+
+5 rows in set (0.00 sec)
+
+mysql>
